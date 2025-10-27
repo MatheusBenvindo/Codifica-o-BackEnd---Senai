@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kk9rQS9xfzs=",
+  "dgSpecHash": "9ybG9smQ+L4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\matheus.ribeiro\\Downloads\\Exo\\Exo.WebApi\\Exo.WebApi.csproj",
+  "projectFilePath": "C:\\Users\\matheus.ribeiro\\Downloads\\Codifica-o-BackEnd---Senai\\Exo-API\\Exo.WebApi\\Exo.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matheus.ribeiro\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\matheus.ribeiro\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
