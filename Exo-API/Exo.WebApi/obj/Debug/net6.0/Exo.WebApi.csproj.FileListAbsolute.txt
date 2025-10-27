@@ -1090,3 +1090,5 @@ C:\Users\matheus.ribeiro\Downloads\Codifica-o-BackEnd---Senai\Exo-API\Exo.WebApi
 C:\Users\matheus.ribeiro\Downloads\Codifica-o-BackEnd---Senai\Exo-API\Exo.WebApi\obj\Debug\net6.0\Exo.WebApi.pdb
 C:\Users\matheus.ribeiro\Downloads\Codifica-o-BackEnd---Senai\Exo-API\Exo.WebApi\obj\Debug\net6.0\Exo.WebApi.genruntimeconfig.cache
 C:\Users\matheus.ribeiro\Downloads\Codifica-o-BackEnd---Senai\Exo-API\Exo.WebApi\obj\Debug\net6.0\ref\Exo.WebApi.dll
+C:\Users\matheus.ribeiro\Downloads\Codifica-o-BackEnd---Senai\Exo-API\Exo.WebApi\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\matheus.ribeiro\Downloads\Codifica-o-BackEnd---Senai\Exo-API\Exo.WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

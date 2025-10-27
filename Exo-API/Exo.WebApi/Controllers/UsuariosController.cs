@@ -2,6 +2,7 @@ using Exo.WebApi.Models;
 using Exo.WebApi.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Exo.WebApi.Controllers
 {
@@ -44,6 +45,7 @@ namespace Exo.WebApi.Controllers
         }
 
         // PUT: /api/usuarios/{id}
+        [Authorize]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Usuario usuario)
         {
@@ -52,6 +54,7 @@ namespace Exo.WebApi.Controllers
         }
 
         // DELETE: /api/usuarios/{id}
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {

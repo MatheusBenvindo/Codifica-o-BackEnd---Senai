@@ -53,5 +53,26 @@ namespace Exo.WebApi.Repositories
             _context.Usuarios.Remove(usuarioBuscado);
             _context.SaveChanges();
         }
+
+        // LOGIN - Autenticar usuário
+        public Usuario Login(string email, string senha)
+        {
+            // Busca um usuário pelo email
+            Usuario usuarioBuscado = _context.Usuarios.FirstOrDefault(u => u.Email == email);
+
+            if (usuarioBuscado != null)
+            {
+                // Verifica se a senha corresponde
+                // NOTA: Em um projeto real, aqui deveria haver
+                // a verificação de um HASH de senha, não a senha em texto puro.
+                if (usuarioBuscado.Senha == senha)
+                {
+                    return usuarioBuscado;
+                }
+            }
+
+            // Retorna nulo se o email ou a senha estiverem errados
+            return null;
+        }
     }
 }
