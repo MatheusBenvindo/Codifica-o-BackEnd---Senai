@@ -1,31 +1,34 @@
 using Exo.WebApi.Contexts;
 using Exo.WebApi.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuração do Entity Framework
-builder.Services.AddDbContext<ExoContext>(options =>
-    options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=ExoApi;Trusted_Connection=True;"));
+// Configura a conexão com o banco de dados
+builder.Services.AddScoped<ExoContext, ExoContext>();
 
+// Registra o repositório de Projetos
+builder.Services.AddTransient<ProjetoRepository, ProjetoRepository>();
+
+// ADICIONE ESTA LINHA:
+// Registra o novo repositório de Usuários
+builder.Services.AddTransient<UsuarioRepository, UsuarioRepository>();
+
+
+// Adiciona o serviço de controladores
 builder.Services.AddControllers();
-builder.Services.AddTransient<ProjetoRepository>();
-
-// Configuração do Swagger (opcional, mas útil para desenvolvimento)
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseRouting();
 
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.Run();
